@@ -1,0 +1,35 @@
+Here we use the config class instead of using xml
+@congiguration -> congig class
+@component scan -> scan all the components inside the given package
+
+// here we provide the bean id  in @component annotation but by default the bean id for @component annoation is
+// same as the class name with first letter is in lowercase for this Class i we do not want to give the manual name to bean then default id is "college"
+//@Component("collegebean")
+public class College {
+
+    public void test(){
+        System.out.println("all good");
+    }
+}
+
+
+
+//by default bean id is same as the method name.
+    //we also provider the list of bean id if we want to give several name to a single bean eg: @Bean(name={"collgebeanhai","co1","co2"})
+    @Bean(name="collgebeanhai")
+    public College collegehai(){
+        College college=new College();
+        return college;
+    }
+
+
+
+@component
+@primary
+
+@primary used if we have various beans for one interface and wanrt to prioritise one then we used this @primary annotation
+
+
+
+
+
